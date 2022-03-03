@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["musicApp.csproj", "musicApp/"]
+COPY ["musicApp/musicApp.csproj", "musicApp/"]
 RUN dotnet restore "musicApp/musicApp.csproj"
 COPY . .
 WORKDIR "/src/musicApp"
